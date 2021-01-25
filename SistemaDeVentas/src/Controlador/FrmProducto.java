@@ -741,7 +741,7 @@ public final class FrmProducto extends javax.swing.JInternalFrame {
 
             cod = jTabla.getValueAt(fila, 0).toString();
             nombre = jTabla.getValueAt(fila, 1).toString();
-            ubiBodega = jTabla.getValueAt(fila, 6).toString();
+            ubiBodega = jTabla.getValueAt(fila, 6) == null ? "" : jTabla.getValueAt(fila, 6).toString() ;
             
          
             if(detalleCompras == 2){
