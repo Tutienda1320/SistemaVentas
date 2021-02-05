@@ -65,7 +65,7 @@ public class Fdetalle_venta {
     public boolean insertar(Ddetalle_venta datos) {
 
         sSQL = "insert into detalle_venta (cantidad_detalle , cod_productoFK,precio_producto"
-                + ", cod_ventaFk ,subtotal,subPrecioCompra,precio_compra) values (?,?,?,?,?,?,?)";
+                + ", cod_ventaFk ,subtotal) values (?,?,?,?,?)";
         try {
             PreparedStatement pst = cn.prepareStatement(sSQL);
             pst.setInt(1, datos.getCantidad_detalle());
@@ -73,8 +73,6 @@ public class Fdetalle_venta {
             pst.setLong(3, datos.getPrecio_producto());
             pst.setInt(4, datos.getCod_ventaFK());
             pst.setLong(5, datos.getSubtotal());
-            pst.setLong(6, datos.getSubPrecioCompra());
-            pst.setLong(7, datos.getPrecio_compra());
 
             int N = pst.executeUpdate();
             if (N != 0) {
@@ -194,7 +192,7 @@ public class Fdetalle_venta {
     public boolean insertarDetalle(Ddetalle_venta datos) {
 
         sSQL = "INSERT INTO detalle_venta (cantidad_detalle , cod_productoFK,precio_producto,"
-                + "cod_ventaFk ,subtotal,subPrecioCompra,precio_compra) VALUES (?,?,?,?,?,?,?)";
+                + "cod_ventaFk ,subtotal) VALUES (?,?,?,?,?)";
         try {
             PreparedStatement pst = cn.prepareStatement(sSQL);
             pst.setInt(1, datos.getCantidad_detalle());
@@ -202,8 +200,6 @@ public class Fdetalle_venta {
             pst.setLong(3, datos.getPrecio_producto());
             pst.setInt(4, datos.getCod_ventaFK());
             pst.setLong(5, datos.getSubtotal());
-            pst.setLong(6, datos.getSubPrecioCompra());
-            pst.setLong(7, datos.getPrecio_compra());
             int N = pst.executeUpdate();
             if (N != 0) {
                 return true;

@@ -205,8 +205,6 @@ public class Fdetalle_compra {
             pst.setLong(3, datos.getPrecio_producto());
             pst.setInt(4, datos.getCod_ventaFK());
             pst.setLong(5, datos.getSubtotal());
-            pst.setLong(6, datos.getSubPrecioCompra());
-            pst.setLong(7, datos.getPrecio_compra());
             int N = pst.executeUpdate();
             if (N != 0) {
                 return true;

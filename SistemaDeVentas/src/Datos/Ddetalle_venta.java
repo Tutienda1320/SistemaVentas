@@ -12,8 +12,6 @@ public class Ddetalle_venta {
     private long cod_productoFK; 
     private int cod_ventaFK;
     private long subtotal;
-    private long subPrecioCompra;
-    private long precio_compra;
 
     public Ddetalle_venta() {
     }
@@ -25,8 +23,6 @@ public class Ddetalle_venta {
         this.cod_productoFK = cod_productoFK;
         this.cod_ventaFK = cod_ventaFK;
         this.subtotal = subtotal;
-        this.subPrecioCompra = subPrecioCompra;
-        this.precio_compra = precio_compra;
     }
 
  
@@ -79,22 +75,6 @@ public class Ddetalle_venta {
         this.subtotal = subtotal;
     }
     
-  
-    public long getSubPrecioCompra() {
-        return subPrecioCompra;
-    }
-
-    public void setSubPrecioCompra(long subPrecioCompra) {
-        this.subPrecioCompra = subPrecioCompra;
-    }
-
-    public long getPrecio_compra() {
-        return precio_compra;
-    }
-
-    public void setPrecio_compra(long precio_compra) {
-        this.precio_compra = precio_compra;
-    }
     
     
 }

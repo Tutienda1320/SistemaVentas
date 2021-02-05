@@ -207,15 +207,11 @@ public final class FrmVentaDetalle extends javax.swing.JInternalFrame {
         String prec = txtPrecio_producto.getText();
         String prec2 = prec.replaceAll("\\.", "");
 
-        String SubPrec = txtSubPrecioCompra.getText();
-        String SubPrec2 = SubPrec.replaceAll("\\.", "");
 
         long var1 = Long.parseLong(prec2);
         long var2 = Long.parseLong(txtCantidadProducto.getText());
-        long var3 = Long.parseLong(SubPrec2);
 
         long resultadoDetalle = var1 * var2;
-        long resultadoDetalle2 = var2 * var3;
 
         Ddetalle_venta datos = new Ddetalle_venta();
         Fdetalle_venta funcion = new Fdetalle_venta();
@@ -225,9 +221,7 @@ public final class FrmVentaDetalle extends javax.swing.JInternalFrame {
         datos.setCod_ventaFK(Integer.parseInt(txtCod_ventaFK.getText()));
         datos.setPrecio_producto(var1);
         datos.setSubtotal(resultadoDetalle);
-        datos.setSubPrecioCompra(resultadoDetalle2);
 
-        datos.setPrecio_compra(var3);
 
         if (funcion.insertarDetalle(datos)) {
 
@@ -1212,18 +1206,14 @@ public final class FrmVentaDetalle extends javax.swing.JInternalFrame {
         String prec = txtPrecio_producto.getText();
         String prec2 = prec.replaceAll("\\.", "");
 
-        String SubPrec = txtSubPrecioCompra.getText();
-        String SubPrec2 = SubPrec.replaceAll("\\.", "");
 
         long var1 = Long.parseLong(prec2);
         long var2 = Long.parseLong(txtCantidadProducto.getText());
-        long var3 = Long.parseLong(SubPrec2);
 
         // long var1 = Long.parseLong(txtPrecio_producto.getText());
         // long var2 = Long.parseLong(txtCantidadProducto.getText());
         //  long var3 =Long.parseLong(txtSubPrecioCompra.getText());
         long resultadoDetalle = var1 * var2;
-        long resultadoDetalle2 = var2 * var3;
 
         Ddetalle_venta datos = new Ddetalle_venta();
         Fdetalle_venta funcion = new Fdetalle_venta();
@@ -1238,10 +1228,6 @@ public final class FrmVentaDetalle extends javax.swing.JInternalFrame {
         String subTotal = String.valueOf(resultadoDetalle);
         String subTotal2 = subTotal.replaceAll("\\.", "");
         datos.setSubtotal(Long.valueOf(subTotal2));
-
-        String subPrecCompra = String.valueOf(resultadoDetalle2);
-        String subPrecCompra2 = subPrecCompra.replaceAll("\\.", "");
-        datos.setSubPrecioCompra(Long.valueOf(subPrecCompra2));
 
         if (funcion.insertar(datos)) {
 

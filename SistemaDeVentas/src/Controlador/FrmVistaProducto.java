@@ -194,7 +194,6 @@ public class FrmVistaProducto extends javax.swing.JInternalFrame {
             nombre = jTabla.getValueAt(fila, 1).toString();
             precio = jTabla.getValueAt(fila, 4).toString();
             stock = jTabla.getValueAt(fila, 5).toString();
-            precio_compra = jTabla.getValueAt(fila, 6).toString();
 
             
             if (comprobarProducto == 2) {
@@ -203,7 +202,6 @@ public class FrmVistaProducto extends javax.swing.JInternalFrame {
                 FrmVentaDetalle.txtNombre_producto.setText(nombre);
                 FrmVentaDetalle.txtPrecio_producto.setText(precio);
                 FrmVentaDetalle.txtStockDetalle.setText(stock);
-                FrmVentaDetalle.txtSubPrecioCompra.setText(precio_compra);
                 FrmVentaDetalle.txtCantidadProducto.setEditable(true);
                 FrmVentaDetalle.txtCod_producto.setEditable(false);
                 FrmVentaDetalle.txtCantidadProducto.setText("");
