@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 17-06-2021 a las 05:16:48
+-- Tiempo de generación: 17-06-2021 a las 05:21:29
 -- Versión del servidor: 10.4.14-MariaDB
 -- Versión de PHP: 7.2.33
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `bdcontroldeventas`
 --
+CREATE DATABASE IF NOT EXISTS `bdcontroldeventas` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `bdcontroldeventas`;
 
 -- --------------------------------------------------------
 
